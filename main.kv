@@ -1,0 +1,53 @@
+
+<Button>:
+    background_normal: ""
+    background_color: 0.1, 0.1, 0.15, 1
+    color: 0, 0.8, 1, 1
+    font_size: 18
+
+
+BoxLayout:
+    orientation: "vertical"
+    padding: 20
+    spacing: 15
+
+    canvas.before:
+        Color:
+            rgba: 0.08, 0.08, 0.10, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+
+    Label:
+        text: "Shutdown Timer"
+        font_size: 32
+        bold: True
+        color: 0, 0.8, 1, 1
+        size_hint_y: 0.3
+
+    AnchorLayout:
+        anchor_x: "center"
+        anchor_y: "center"
+        size_hint_y: None
+        height: 60
+
+        TextInput:
+            id: idkinput
+            hint_text: "Enter time in seconds"
+            multiline: False
+            size_hint: 0.5, None
+            height: 45
+
+    BoxLayout:
+        orientation: "horizontal"
+        spacing: 10
+        size_hint_y: None
+        height: 50
+
+        Button:
+            text: "Submit"
+            on_press: app.on_button_click(self)
+
+        Button:
+            text: "Cancel"
+            on_press: app.Cancel(self)
