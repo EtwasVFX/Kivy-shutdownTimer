@@ -1,0 +1,1 @@
+# I Fianly started to learn Python and decided to also try to learn kivy
